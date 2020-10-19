@@ -11,6 +11,7 @@ use LibForm\Library\Form;
 use LibSms\Library\Sms;
 use Photobooth\Model\Photobooth as Photobooth;
 use LibFormatter\Library\Formatter;
+use LibShorturl\Library\Shortener;
 
 class TextController extends \Admin\Controller
 {
