@@ -31,7 +31,11 @@ return [
                 'lib-sms' => NULL
             ]
         ],
-        'optional' => []
+        'optional' => [
+            [
+                'lib-shorturl' => NULL
+            ]
+        ]
     ],
     'autoload' => [
         'classes' => [
@@ -44,6 +48,16 @@ return [
     ],
     'routes' => [
         'admin' => [
+            'adminPhotoboothPreText' => [
+                'path' => [
+                    'value' => '/photobooth/(:id)/text',
+                    'params' => [
+                        'id'  => 'number'
+                    ]
+                ],
+                'method' => 'GET',
+                'handler' => 'AdminPhotoboothText\\Controller\\Text::text'
+            ],
             'adminPhotoboothText' => [
                 'path' => [
                     'value' => '/photobooth/(:id)/text',
@@ -70,5 +84,8 @@ return [
                 ]
             ]
         ]
+    ],
+    'adminPhotoBoothText' => [
+        'text' => 'Please download your images on (:url)'
     ]
 ];
